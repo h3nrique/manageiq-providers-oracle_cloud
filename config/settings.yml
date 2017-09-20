@@ -1,0 +1,12 @@
+---
+:ems:
+  :ems_oraclecloud:
+    :blacklisted_event_names: []
+    :event_handling:
+      :event_groups:
+:http_proxy:
+  :oraclecloud:
+    :host:
+    :password:
+    :port:
+    :user:
