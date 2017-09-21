@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,lib}/**/*"]
 
-  s.add_dependency "fog-oraclecloud", "~> 0.1.17" # FIXME :: Usar versão 0.1.18, aguardando owner do fog-oraclecloud atualizar o projeto no rubygems.org.
+  s.add_dependency "fog-oraclecloud", "~> 0.1.18"
 
   s.add_development_dependency "codeclimate-test-reporter", "~> 1.0"
   s.add_development_dependency "simplecov", '~> 1.0'
