@@ -7,11 +7,11 @@ class ManageIQ::Providers::OracleCloud::NetworkManager < ManageIQ::Providers::Ne
            :class_name => ManageIQ::Providers::OracleCloud::NetworkManager::FloatingIp
 
   def self.ems_type
-    @ems_type ||= "oraclecloud_network".freeze
+    @ems_type ||= "oracle_cloud_network".freeze
   end
 
   def self.description
-    @description ||= "OracleCloud Network".freeze
+    @description ||= "Oracle Cloud Network".freeze
   end
 
   def self.hostname_required?

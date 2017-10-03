@@ -5,133 +5,73 @@ module ManageIQ
       # to display which regions are available when adding a new Azure provider.
 
       REGIONS = {
-        "australiaeast"      => {
-          :name        => "australiaeast",
-          :description => _("Australia East"),
+        "us1" => {
+          :name        => "us1",
+          :description => _("US Commercial 1 (us1)"),
         },
-        "australiasoutheast" => {
-          :name        => "australiasoutheast",
-          :description => _("Australia Southeast"),
+        "us2" => {
+          :name        => "us2",
+          :description => _("US Commercial 2 (us2)"),
         },
-        "brazilsouth"        => {
-          :name        => "brazilsouth",
-          :description => _("Brazil South"),
+        "us6" => {
+          :name        => "us6",
+          :description => _("US Commercial 6 (us6)"),
         },
-        "canadacentral"      => {
-          :name        => "canadacentral",
-          :description => _("Canada Central"),
+        "us8" => {
+          :name        => "us8",
+          :description => _("US Commercial 8 (us8)"),
         },
-        "canadaeast"         => {
-          :name        => "canadaeast",
-          :description => _("Canada East"),
+        "ap1" => {
+          :name        => "ap1",
+          :description => _("APAC Commercial 1 (ap1)"),
         },
-        "centralindia"       => {
-          :name        => "centralindia",
-          :description => _("Central India"),
+        "ap2" => {
+          :name        => "ap2",
+          :description => _("APAC Commercial 2 (ap2)"),
         },
-        "centralus"          => {
-          :name        => "centralus",
-          :description => _("Central US"),
+        "ap4" => {
+          :name        => "ap4",
+          :description => _("APAC Commercial 4 (ap4)"),
         },
-        "eastasia"           => {
-          :name        => "eastasia",
-          :description => _("East Asia"),
+        "ap5" => {
+          :name        => "ap5",
+          :description => _("APAC Commercial 5 (ap5)"),
         },
-        "eastus"             => {
-          :name        => "eastus",
-          :description => _("East US"),
+        "ca2" => {
+          :name        => "ca2",
+          :description => _("CA Commercial 2 (ca2)"),
         },
-        "eastus2"            => {
-          :name        => "eastus2",
-          :description => _("East US 2"),
+        "ca3" => {
+          :name        => "ca3",
+          :description => _("CA Commercial 3 (ca3)"),
         },
-        "germanycentral"     => {
-          :name        => "germanycentral",
-          :description => _("Germany Central"),
+        "em1" => {
+          :name        => "em1",
+          :description => _("EMEA Commercial 1 (em1)"),
         },
-        "germanynortheast"   => {
-          :name        => "germanynortheast",
-          :description => _("Germany Northeast"),
+        "em2" => {
+          :name        => "em2",
+          :description => _("EMEA Commercial 2 (em2)"),
         },
-        "japaneast"          => {
-          :name        => "japaneast",
-          :description => _("Japan East"),
+        "em3" => {
+          :name        => "em3",
+          :description => _("EMEA Commercial 3 (em3)"),
         },
-        "japanwest"          => {
-          :name        => "japanwest",
-          :description => _("Japan West"),
+        "em4" => {
+          :name        => "em4",
+          :description => _("EMEA Commercial 4 (em4)"),
         },
-        "koreacentral"       => {
-          :name        => "koreacentral",
-          :description => _("Korea Central"),
+        "la1" => {
+          :name        => "la1",
+          :description => _("LAD Commercial 1 (la1)"),
         },
-        "koreasouth"         => {
-          :name        => "koreasouth",
-          :description => _("Korea South"),
+        "US" => {
+          :name        => "US",
+          :description => _("Public Cloud Services - US"),
         },
-        "northcentralus"     => {
-          :name        => "northcentralus",
-          :description => _("North Central US"),
-        },
-        "northeurope"        => {
-          :name        => "northeurope",
-          :description => _("North Europe"),
-        },
-        "southcentralus"     => {
-          :name        => "southcentralus",
-          :description => _("South Central US"),
-        },
-        "southeastasia"      => {
-          :name        => "southeastasia",
-          :description => _("South East Asia"),
-        },
-        "southindia"         => {
-          :name        => "southindia",
-          :description => _("South India"),
-        },
-        "uksouth"            => {
-          :name        => "uksouth",
-          :description => _("UK South"),
-        },
-        "ukwest"             => {
-          :name        => "ukwest",
-          :description => _("UK West"),
-        },
-        "usgovarizona"       => {
-          :name        => "usgovarizona",
-          :description => _("US Gov Arizona"),
-        },
-        "usgoviowa"          => {
-          :name        => "usgoviowa",
-          :description => _("US Gov Iowa"),
-        },
-        "usgovtexas"         => {
-          :name        => "usgovtexas",
-          :description => _("US Gov Texas"),
-        },
-        "usgovvirginia"      => {
-          :name        => "usgovvirginia",
-          :description => _("US Gov Virginia"),
-        },
-        "westeurope"         => {
-          :name        => "westeurope",
-          :description => _("West Europe"),
-        },
-        "westindia"          => {
-          :name        => "westindia",
-          :description => _("West India"),
-        },
-        "westcentralus"      => {
-          :name        => "westcentralus",
-          :description => _("West Central US"),
-        },
-        "westus"             => {
-          :name        => "westus",
-          :description => _("West US"),
-        },
-        "westus2"            => {
-          :name        => "westus2",
-          :description => _("West US 2"),
+        "EMEA" => {
+          :name        => "EMEA",
+          :description => _("Public Cloud Services - EMEA"),
         },
       }.freeze
 

@@ -1,4 +1,4 @@
-# manageiq-providers-oraclecloud
+# manageiq-providers-oracle_cloud
 
 [![Gem Version](https://badge.fury.io/rb/manageiq-providers-oracle_cloud.svg)](http://badge.fury.io/rb/manageiq-providers-oracle_cloud)
 [![Build Status](https://travis-ci.org/ManageIQ/manageiq-providers-oracle_cloud.svg)](https://travis-ci.org/ManageIQ/manageiq-providers-oracle_cloud)
