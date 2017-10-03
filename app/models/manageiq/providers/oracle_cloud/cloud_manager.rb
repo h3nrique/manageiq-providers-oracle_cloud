@@ -2,7 +2,9 @@ class ManageIQ::Providers::OracleCloud::CloudManager < ManageIQ::Providers::Clou
 
   require_nested :Flavor
 
-  alias_attribute :azure_tenant_id, :uid_ems
+  include ManageIQ::Providers::OracleCloud::ManagerMixin
+
+  alias_attribute :domain, :uid_ems
 
   has_many :resource_groups, :foreign_key => :ems_id, :dependent => :destroy
 

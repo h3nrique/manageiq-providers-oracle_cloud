@@ -17,3 +17,5 @@
 
 *.iml
 .idea/
+
+third-scripts/credentials.txt
