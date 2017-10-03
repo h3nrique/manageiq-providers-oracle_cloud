@@ -1,7 +1,7 @@
 class ManageIQ::Providers::OracleCloud::NetworkManager < ManageIQ::Providers::NetworkManager
   require_nested :FloatingIp
 
-  include ManageIQ::Providers::OracleCloud::ManagerMixin
+  # include ManageIQ::Providers::OracleCloud::ManagerMixin
 
   has_many :floating_ips, :foreign_key => :ems_id, :dependent => :destroy,
            :class_name => ManageIQ::Providers::OracleCloud::NetworkManager::FloatingIp

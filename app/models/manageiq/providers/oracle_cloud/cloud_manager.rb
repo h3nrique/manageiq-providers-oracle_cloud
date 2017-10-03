@@ -1,5 +1,7 @@
 class ManageIQ::Providers::OracleCloud::CloudManager < ManageIQ::Providers::CloudManager
 
+  require_nested :Flavor
+
   def ensure_network_manager
     build_network_manager(:type => 'ManageIQ::Providers::OracleCloud::NetworkManager') unless network_manager
   end
@@ -13,6 +15,7 @@ class ManageIQ::Providers::OracleCloud::CloudManager < ManageIQ::Providers::Clou
   end
 
   def description
-    ManageIQ::Providers::OracleCloud::Regions.find_by_name(provider_region)[:description]
+    ''
+    #ManageIQ::Providers::OracleCloud::Regions.find_by_name(provider_region)[:description]
   end
 end
