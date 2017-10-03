@@ -1,14 +1,14 @@
 # manageiq-providers-oraclecloud
 
-[![Gem Version](https://badge.fury.io/rb/manageiq-providers-oraclecloud.svg)](http://badge.fury.io/rb/manageiq-providers-oraclecloud)
-[![Build Status](https://travis-ci.org/ManageIQ/manageiq-providers-oraclecloud.svg)](https://travis-ci.org/ManageIQ/manageiq-providers-oraclecloud)
-[![Code Climate](https://codeclimate.com/github/ManageIQ/manageiq-providers-oraclecloud.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-oraclecloud)
-[![Test Coverage](https://codeclimate.com/github/ManageIQ/manageiq-providers-oraclecloud/badges/coverage.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-oraclecloud/coverage)
-[![Dependency Status](https://gemnasium.com/ManageIQ/manageiq-providers-oraclecloud.svg)](https://gemnasium.com/ManageIQ/manageiq-providers-oraclecloud)
-[![Security](https://hakiri.io/github/ManageIQ/manageiq-providers-oraclecloud/master.svg)](https://hakiri.io/github/ManageIQ/manageiq-providers-oraclecloud/master)
+[![Gem Version](https://badge.fury.io/rb/manageiq-providers-oracle_cloud.svg)](http://badge.fury.io/rb/manageiq-providers-oracle_cloud)
+[![Build Status](https://travis-ci.org/ManageIQ/manageiq-providers-oracle_cloud.svg)](https://travis-ci.org/ManageIQ/manageiq-providers-oracle_cloud)
+[![Code Climate](https://codeclimate.com/github/ManageIQ/manageiq-providers-oracle_cloud.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-oracle_cloud)
+[![Test Coverage](https://codeclimate.com/github/ManageIQ/manageiq-providers-oracle_cloud/badges/coverage.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-oracle_cloud/coverage)
+[![Dependency Status](https://gemnasium.com/ManageIQ/manageiq-providers-oracle_cloud.svg)](https://gemnasium.com/ManageIQ/manageiq-providers-oracle_cloud)
+[![Security](https://hakiri.io/github/ManageIQ/manageiq-providers-oracle_cloud/master.svg)](https://hakiri.io/github/ManageIQ/manageiq-providers-oracle_cloud/master)
 
-[![Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ManageIQ/manageiq-providers-oraclecloud?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Translate](https://img.shields.io/badge/translate-zanata-blue.svg)](https://translate.zanata.org/zanata/project/view/manageiq-providers-oraclecloud)
+[![Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ManageIQ/manageiq-providers-oracle_cloud?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Translate](https://img.shields.io/badge/translate-zanata-blue.svg)](https://translate.zanata.org/zanata/project/view/manageiq-providers-oracle_cloud)
 
 ManageIQ plugin for the OracleCloud provider.
 
