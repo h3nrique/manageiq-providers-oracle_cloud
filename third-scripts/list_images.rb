@@ -3,8 +3,12 @@
 require 'fog/oraclecloud'
 require 'terminal-table'
 
+load 'connect.rb'
+
+# List all public images
 def all
-    data = Fog::Compute[:oraclecloud].images.all_public
+    compute = connect()
+    data = compute.images.all_public
 end
 
 images = all()

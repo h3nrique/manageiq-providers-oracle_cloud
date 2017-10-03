@@ -3,9 +3,12 @@
 require 'fog/oraclecloud'
 require 'terminal-table'
 
+load 'connect.rb'
+
 ## Create ssh key
 def create(name, enabled, key)
-    data = Fog::Compute[:oraclecloud].ssh_keys.create(
+    compute = connect()
+    data = compute.ssh_keys.create(
             :name       => name.dup,
             :enabled    => enabled,
             :key        => key

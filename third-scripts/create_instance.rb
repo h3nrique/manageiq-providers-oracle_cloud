@@ -3,9 +3,12 @@
 require 'fog/oraclecloud'
 require 'terminal-table'
 
+load 'connect.rb'
+
 ## Create instance
 def create(name, shape="oc3", imagelist="/oracle/public/oel_6.4_2GB_v1", label, sshkeys)
-    data = Fog::Compute[:oraclecloud].instances.create(
+    compute = connect()
+    data = compute.instances.create(
             :name      => name.dup, 
             :shape     => shape, 
             :imagelist => imagelist,

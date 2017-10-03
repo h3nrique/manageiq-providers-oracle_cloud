@@ -2,9 +2,12 @@
 
 require 'fog/oraclecloud'
 
+load 'connect.rb'
+
 ## Delete instance
 def delete(name)
-    instance = Fog::Compute[:oraclecloud].instances.get(name)
+    compute = connect()
+    instance = compute.instances.get(name)
     instance.destroy()
     instance.wait_for { state == 'stopped' }
 end

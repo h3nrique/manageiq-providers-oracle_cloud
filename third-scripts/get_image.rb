@@ -3,9 +3,12 @@
 require 'fog/oraclecloud'
 require 'terminal-table'
 
+load 'connect.rb'
+
 ## Get image
 def get(name)
-    data = Fog::Compute[:oraclecloud].images.get_public(name)
+    compute = connect()
+    data = compute.images.get_public(name)
 end
 
 image = get(ARGV[0])

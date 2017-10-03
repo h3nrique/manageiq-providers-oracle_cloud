@@ -2,9 +2,12 @@
 
 require 'fog/oraclecloud'
 
+load 'connect.rb'
+
 ## List all shapes
 def all
-    data = Fog::Compute[:oraclecloud].shapes.all
+    compute = connect()
+    data = compute.shapes.all
 end
 
 shapes = all()

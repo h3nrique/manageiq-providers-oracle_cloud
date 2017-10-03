@@ -3,9 +3,12 @@
 require 'fog/oraclecloud'
 require 'terminal-table'
 
+load 'connect.rb'
+
 ## List all instances
 def all
-    data = Fog::Compute[:oraclecloud].instances
+    compute = connect()
+    data = compute.instances
 end
 
 instances = all()

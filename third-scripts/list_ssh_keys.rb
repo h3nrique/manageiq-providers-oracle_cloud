@@ -3,9 +3,12 @@
 require 'fog/oraclecloud'
 require 'terminal-table'
 
+load 'connect.rb'
+
 ## List all ssh keys
 def all
-    ssh_keys = Fog::Compute[:oraclecloud].ssh_keys
+    compute = connect()
+    ssh_keys = compute.ssh_keys
 
     rows = []
     ssh_keys.each { |ssh_key| 

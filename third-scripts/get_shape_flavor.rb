@@ -3,9 +3,12 @@
 require 'fog/oraclecloud'
 require 'terminal-table'
 
+load 'connect.rb'
+
 ## Get shape
 def get(name)
-    data = Fog::Compute[:oraclecloud].shapes.get(name)
+    compute = connect()
+    data = compute.shapes.get(name)
 end
 
 shape = get(ARGV[0])

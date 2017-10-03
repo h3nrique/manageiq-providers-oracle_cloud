@@ -3,8 +3,11 @@
 require 'fog/oraclecloud'
 require 'terminal-table'
 
+load 'connect.rb'
+
 def all
-    data = Fog::Compute[:oraclecloud].orchestrations
+    compute = connect()
+    data = compute.orchestrations
 end
 
 orchestrations = all()
