@@ -6,7 +6,7 @@ module ManageIQ::Providers::OracleCloud::ManagerMixin
 
     username    = options[:user] || authentication_userid(options[:auth_type])
     password    = options[:pass] || authentication_password(options[:auth_type])
-    self.class.raw_connect(username, password, domain, compute_api)
+    self.class.raw_connect(username, password, oracle_cloud_domain, hostname)
   end
 
   def verify_credentials(_auth_type = nil, options = {})
@@ -20,7 +20,7 @@ module ManageIQ::Providers::OracleCloud::ManagerMixin
   end
 
   module ClassMethods
-    def raw_connect(username, password, domain, compute_api)
+    def raw_connect(username, password, domain, hostname)
       require 'fog/oraclecloud'
 
       if domain.blank?
@@ -32,44 +32,29 @@ module ManageIQ::Providers::OracleCloud::ManagerMixin
         oracle_username: username,
         oracle_password: password,
         oracle_domain: domain,
-        oracle_compute_api: compute_api
+        oracle_compute_api: hostname
       })
     end
 
     # Discovery
-    def discover(username, password, domain, compute_api)
+    def discover(username, password, domain, hostname)
       new_emses         = []
 
       all_emses         = includes(:authentications)
       all_ems_names     = all_emses.index_by(&:name)
 
-      known_emses       = all_emses.select { |e| e.authentication_userid == clientid }
-      known_ems_regions = known_emses.index_by(&:provider_region)
-
-      compute           = raw_connect(username, password, domain, compute_api)
-
-#      compute.list_locations.each do |region|
-#        next if known_ems_regions.include?(region.name)
-#        next if vms_in_region(compute, region.name).count == 0 # instances
-        # TODO: Check if images are == 0 and if so then skip
-#        new_emses << create_discovered_region(region.name, clientid, clientkey, azure_tenant_id, subscription, all_ems_names)
-#      end
-
-      # at least create the Azure-eastus region.
-      if new_emses.blank? && known_emses.blank?
-        new_emses << create_discovered_region("eastus", username, password, domain, compute_api, all_ems_names)
-      end
+      new_emses << create_discovered_region("uscom-central-1", username, password, domain, hostname, all_ems_names)
 
       EmsRefresh.queue_refresh(new_emses) unless new_emses.blank?
 
       new_emses
     end
 
-    def discover_queue(username, password, domain, compute_api)
+    def discover_queue(username, password, domain, hostname)
       MiqQueue.put(
           :class_name  => name,
           :method_name => "discover_from_queue",
-          :args        => [username, MiqPassword.encrypt(password), domain, compute_api]
+          :args        => [username, MiqPassword.encrypt(password), domain, hostname]
       )
     end
 
@@ -77,11 +62,11 @@ module ManageIQ::Providers::OracleCloud::ManagerMixin
       compute.instances()
     end
 
-    def discover_from_queue(username, password, domain, compute_api)
-      discover(username, MiqPassword.decrypt(password), domain, compute_api)
+    def discover_from_queue(username, password, domain, hostname)
+      discover(username, MiqPassword.decrypt(password), domain, hostname)
     end
 
-    def create_discovered_region(region_name, username, password, domain, compute_api, all_ems_names)
+    def create_discovered_region(region_name, username, password, domain, hostname, all_ems_names)
 
       name = region_name
       name = "#{region_name} #{username}" if all_ems_names.include?(name)
@@ -95,7 +80,7 @@ module ManageIQ::Providers::OracleCloud::ManagerMixin
           :provider_region => region_name,
           :zone            => Zone.default_zone,
           :domain         => domain,
-          :compute_api    => compute_api
+          :compute_api    => hostname
       )
       new_ems.update_authentication(
           :default => {

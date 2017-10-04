@@ -1,8 +1,8 @@
 module ManageIQ
   module Providers::OracleCloud
     module Regions
-      # The supported regions for the Azure provider. This is used by the UI
-      # to display which regions are available when adding a new Azure provider.
+      # The supported regions for the Oracle Cloud provider. This is used by the UI
+      # to display which regions are available when adding a new Oracle Cloud provider.
 
       REGIONS = {
         "us1" => {
