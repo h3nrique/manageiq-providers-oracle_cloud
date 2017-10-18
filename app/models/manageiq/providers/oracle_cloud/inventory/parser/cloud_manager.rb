@@ -51,7 +51,7 @@ class ManageIQ::Providers::OracleCloud::Inventory::Parser::CloudManager < Manage
         :uid_ems            => uid,
         :name               => name,
         :location           => location,
-        :vendor             => "oraclecloud",
+        :vendor             => "oracle_cloud",
         :raw_power_state    => "never",
         :template           => true,
         :publicly_available => image['public'],
